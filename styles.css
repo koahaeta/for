@@ -31,9 +31,9 @@ button {
 }
 
 .light-mode .dark-mode-icon {
-    display: none;
+    display: block;
 }
 
 .dark-mode .light-mode-icon {
-    display: none;
+    display: block;
 }
