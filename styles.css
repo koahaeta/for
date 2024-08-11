@@ -28,6 +28,11 @@ button {
 
 .icon {
     display: block;
+    width: 30px;
+    height: 30px;
+    color: blue;
+    font-size: 25px;
+    
 }
 
 .light-mode .dark-mode-icon {
