@@ -26,12 +26,12 @@ button {
     padding: 10px;
 }
 
-#icon {
-    display: none;
+.icon {
+    display: block;
 }
 
 .light-mode .dark-mode-icon {
-    display: none;
+    display: block;
 }
 
 .dark-mode .light-mode-icon {
