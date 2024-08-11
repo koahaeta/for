@@ -5,14 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modo Oscuro y Claro</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Importar Ionicons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ionicons@5.5.3/dist/ionicons/ionicons.css">
 </head>
 <body>
     <header>
-        <button id="theme-toggle">Modo Oscuro</button>
+        <button id="theme-toggle" aria-label="Toggle theme">
+            <ion-icon name="sunny-outline" class="icon light-mode-icon"></ion-icon>
+            <ion-icon name="moon-outline" class="icon dark-mode-icon"></ion-icon>
+        </button>
     </header>
     <main>
         <h1>Bienvenido a mi sitio web</h1>
-        <p>Este es un ejemplo de cómo implementar un botón de modo oscuro y claro.</p>
+        <p>Este es un ejemplo de cómo implementar un botón de modo oscuro y claro con iconos.</p>
     </main>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -21,17 +26,13 @@
     
     document.body.classList.add(currentTheme);
     
-    button.textContent = currentTheme === 'light-mode' ? 'Modo Oscuro' : 'Modo Claro';
-    
     button.addEventListener('click', () => {
         const newTheme = document.body.classList.contains('light-mode') ? 'dark-mode' : 'light-mode';
         document.body.classList.remove('light-mode', 'dark-mode');
         document.body.classList.add(newTheme);
         localStorage.setItem('theme', newTheme);
-        button.textContent = newTheme === 'light-mode' ? 'Modo Oscuro' : 'Modo Claro';
     });
 });
     </script>
-
 </body>
 </html>
