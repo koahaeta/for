@@ -19,7 +19,21 @@ header {
 }
 
 button {
-    padding: 10px;
-    font-size: 16px;
+    background: none;
+    border: none;
     cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.icon {
+    display: none;
+}
+
+.light-mode .dark-mode-icon {
+    display: none;
+}
+
+.dark-mode .light-mode-icon {
+    display: none;
 }
