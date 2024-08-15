@@ -8,48 +8,6 @@
     <meta name="keywords" content="palabra clave 1, palabra clave 2, palabra clave 3">
     <meta name="author" content="Tu nombre">
     <style>
-        @font-face {
-            font-family: 'SF UI Text';
-            src: url('SFUIText-Regular.ttf') format('truetype');
-            font-weight: normal;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'SF UI Text';
-            src: url('SFUIText-Light.ttf') format('truetype');
-            font-weight: 300;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'SF UI Text';
-            src: url('SFUIText-Medium.ttf') format('truetype');
-            font-weight: 500;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'SF UI Text';
-            src: url('SFUIText-Semibold.ttf') format('truetype');
-            font-weight: 600;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'SF UI Text';
-            src: url('SFUIText-Bold.ttf') format('truetype');
-            font-weight: bold;
-            font-style: normal;
-        }
-
-        @font-face {
-            font-family: 'SF UI Text';
-            src: url('../fonts/SFUIText-Heavy.ttf') format('truetype');
-            font-weight: 800;
-            font-style: normal;
-        }
-
         body {
             font-family: 'SF UI Text', sans-serif;
             display: block;
@@ -66,16 +24,28 @@
     </style>
 </head>
 <body>
-    <p class="uno">Este es el fuente iPhone 269</p>
-    <p class="dos">Este es el fuente iPhone 269</p>
-    <p class="tres">Este es el fuente iPhone 269</p>
-    <p class="cuatro">Este es el fuente iPhone 269</p>
-    <p class="cinco">Este es el fuente iPhone 269</p>
-    <p class="seis">Este es el fuente iPhone 269</p>
-    <p class="siete">Este es el fuente iPhone 269</p>
-    <p class="ocho">Este es el fuente iPhone 269</p>
-    <p>Este es el fuente iPhone 269</p>
-    <p>Este es el fuente iPhone 269</p>
-    <p>Este es el fuente iPhone 269</p>
+    <header>
+        <h1 id="saludo"></h1>
+    </header>
+    <script>
+        function saludar() {
+        const ahora = new Date();
+        const hora = ahora.getHours();
+        const saludo = document.getElementById('saludo');
+
+        if (hora < 12) {
+            saludo.textContent = 'Buenos días';
+        } else if (hora < 18) {
+            saludo.textContent = 'Buenas tardes';
+        } else {
+            saludo.textContent = 'Buenas noches';
+       }
+    }
+
+// Llama a la función al cargar la página y cada 10 minutos
+        saludar();
+        setInterval(saludar, 600000); // Cada 600000 milisegundos (10 minutos)
+        
+    </script>
 </body>
 </html>
