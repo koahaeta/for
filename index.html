@@ -33,19 +33,19 @@
         const hora = ahora.getHours();
         const saludo = document.getElementById('saludo');
 
-        if (hora < 12) {
+        if (hora >= 6 && hora < 12) {
             saludo.textContent = 'Buenos días';
-        } else if (hora < 18) {
+        } else if (hora >= 12 && hora < 20) {
             saludo.textContent = 'Buenas tardes';
-        } else {
+        } else if (hora >= 20 && hora < 24) {
             saludo.textContent = 'Buenas noches';
-       }
+        } else {
+            saludo.textContent = 'Buenas madrugadas';
+        }
     }
 
-// Llama a la función al cargar la página y cada 10 minutos
         saludar();
-        setInterval(saludar, 600000); // Cada 600000 milisegundos (10 minutos)
-        
+        setInterval(saludar, 60000); // Actualiza cada 60 segundos
     </script>
 </body>
 </html>
